@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/vaccines"
+    tools:context=".Search.Search_Vaccine">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:background="@color/indigo_500"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:contentInsetStartWithNavigation="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/Toolbar.Light"
+        app:titleTextColor="@color/white"
+        app:title="Search a Vaccine" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/overlay_dark_70" />
+    <Spinner
+        android:id="@+id/spinner"
+        android:background="@drawable/backk"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:popupBackground="@color/grey_50"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:layout_marginLeft="@dimen/spacing_large"
+        android:layout_marginRight="@dimen/spacing_large"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchvaccine"
+        android:layout_margin="@dimen/spacing_middle"
+        android:text="Search Vaccine"
+        android:background="@color/transparent"
+        android:textAlignment="center"
+        android:layout_below="@+id/spinner"
+        android:layout_marginBottom="@dimen/spacing_medium"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/spacing_medium"
+        android:padding="@dimen/spacing_medium"
+        android:layout_below="@+id/searchvaccine"
+
+        />
+
+</RelativeLayout>
